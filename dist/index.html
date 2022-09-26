@@ -5,99 +5,162 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maze-Bank</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="../../assets/css/output.css"/>
   <script defer src="/assets/runtime.bundle.js"></script><script defer src="/assets/main.bundle.js"></script></head>
-
-<!-- // Formulaires, input, boutton envoyer => useraccount display information
-
-//algo
-// récuperer boutton submit
-// récuperer la valeur input
-// créer une variable qui va stocker notre solde
-// créer une fonction quand on click sur le boutton envoyé récup les champs
-// innerhtml
-// ex : argument input.value --> -->
-
-
-  <body>
-    <div class="text-center">
-      <h1 class="rounded bg-purple-400 text-cyan-400 uppercase">
-        Bienvenue sur Maze-Bank
-      </h1>
-      <h3 class="text-black">Gérez votre compte bancaire en ligne</h3>
-    </div>
-    <div id="dashboard" class="container mt-5">
-      <div class="d-flex justify-content-between">
-        <div class="col-md-3 bg-primary rounded">
-          <h1>Dépôt</h1>
-          <p class="fs-3">€<span id="deposit">0</span></p>
-        </div>
-        <div class="col-md-3 bg-success rounded">
-          <h2>Retrait</h2>
-          <p class="fs-3">€<span id="withdraw">0</span></p>
-        </div>
-        <div class="col-md-3 bg-danger rounded">
-          <h2>Solde</h2>
-          <p class="fs-3" id="balance">€<span>3500</span></p>
-        </div>
-      </div>
-      <div>
-        <div id="add-amount" class="d-flex justify-content-center">
-          <div class="col-md-5 container rounded shadow p-4">
-            <h3>Dépôt</h3>
-            <input
-              type="number"
-              class="form-control"
-              id="deposit-input"
-              placeholder="Montant à déposer"
-            />
-            <br />
-            <button class="btn btn-success" id="deposit-btn">Déposer</button>
-          </div>
-        </div>
-        <div class="col-md-5 container rounded shadow p-4">
-          <h3>Retrait</h3>
-          <input
-            type="number"
-            class="form-control"
-            id="withdraw-input"
-            placeholder="Montant à retirer"
+  <body class="text-black font-roboto bg-moon bg-cover bg-center bg-no-repeat">
+    <!-- HEADER -->
+      <header class="h-24 grid grid-cols-3 uppercase">
+        <div class="flex items-center justify-evenly">
+          <img
+            src="../../assets/img/moon-logo.png"
+            alt="logo"
+            height="auto"
+            width="50px"
           />
-          <br />
-          <button class="btn btn-success" id="withdraw-btn">Retirer</button>
         </div>
-        <div class="col-md-5 container rounded shadow p-4">
-          <h3>Envoyer de l'argent</h3>
-          <form action="" method="get">
-            <label for="name">Sélectionnez un bénéficiaire :
-            </label>
-              <input type="text">
-              <select  class="nami" name="nami">
-                <option value="">Nom du bénéficiaire...</option>
-                <option value="nami">Nami</option>
-                <option value="zoro">Zoro</option>
-                <option value="luffy">Luffy</option>
-                <option value="choppa">Choppa</option>
-              </select>
-            <div class="result"></div>
-            <br />
-            <label for="">Ajouter montant à transférer :</label>
-            <input
-              type="number"
-              class="form-control"
-              id="transfer-input"
-              placeholder="Montant"
-            />
-            <button class="btn btn-success" id="transfer-btn">Envoyer</button>
-          </form>
+        <div class="grid col-span-2">
+          <!-- add home and contact icons instead of text -->
+            <nav class="flex items-center">
+              <ul class="flex font-semibold text-gray-300">
+                <li>
+                  <a href="#">Accueil</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
         </div>
-      </div>
-    </div>
+      </header>
+      <!-- BODY -->
+      <section class="">
+        <div class="text-center">
+          <h1 class="uppercase font-semibold text-cyan-500">Bienvenue sur Maze-Bank</h1>
+          <h3 class="text-gray-100">Gérez votre compte bancaire en ligne</h3>
+        </div>
+        <div class="my-16">
+          <h1 class="uppercase font-bold text-center pb-8 text-cyan-500 border-4 border-violet-500 border-double py-8 shadow-2xl text-xl">Opérations courantes</h1>
+        </div>
+        <!-- FIRST ROW -->
+        <section id="dashboard" class="grid grid-cols-1 mt-5">
+          <div class="grid grid-rows-4">
+            <div class="my-4 text-gray-100">
+              <div id="add-amount" class="">
+                <div class="rounded border-4 border-violet-500 border-double pl-4 pb-8 shadow-2xl">
+                  <h3 class="py-4 text-lg font-semibold">Alimenter compte</h3>
+                  <input
+                    type="number"
+                    class="form-control border-2 border-cyan-600 rounded-md pl-3"
+                    id="deposit-input"
+                    placeholder="Montant à déposer"
+                  />
+                  <button class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1" id="deposit-btn">
+                    Déposer
+                  </button>
+                </div>
+                <div class="flex items-center justify-center uppercase font-semibold text-black pt-6">
+                  <div class="rounded-md shadow border bg-blue-400 px-40">
+                    <h1>Dépôt</h1>
+                    <p class="">€<span id="deposit">0</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SECOND ROW -->
+            <div class="my-4 text-gray-100" data-aos="zoom-in-down">
+              <div class="rounded border-4 border-violet-500 border-double shadow-2xl pl-4 pb-8">
+                <h3 class="py-4 text-lg font-semibold">Retrait</h3>
+                <input
+                class="form-control border-2 border-cyan-600 rounded-md pl-3"
+                  type="number"
+                  id="withdraw-input"
+                  placeholder="Montant à retirer"
+                />
+                <button class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1" id="withdraw-btn">
+                  Retirer
+                </button>
+              </div>
+              <div class="flex items-center justify-center uppercase font-semibold text-black pt-6">
+                <div class="rounded-md shadow border bg-blue-200 px-40">
+                  <h2>Retrait</h2>
+                  <p class="">€<span id="withdraw">0</span></p>
+                </div>
+              </div>
+            </div>
+            <!-- THIRD ROW -->
+            <div class="flex items-center justify-center uppercase font-semibold shadow-2xl">
+              <div class="rounded-md border bg-cyan-100 px-40">
+                <h2>Solde</h2>
+                <br>
+                <p class="rounded-full bg-cyan-200" id="balance">€<span>3500</span></p>
+              </div>
+            </div>
+            <!-- FOURTH ROW -->
+              <div class="text-gray-100">
+                <div class="pb-12">
+                  <h1 class="uppercase font-bold text-center pb-8 text-cyan-500 border-4 border-violet-500 border-double py-8 shadow-2xl text-xl">Effectuer un virement</h1>
+                </div>
+                  <form action="" method="get" class="rounded border-4 border-violet-500 border-double shadow-2xl">
+                    <label for="name" class="ml-3 text-lg font-semibold">Sélectionnez un bénéficiaire : </label>
+                    <br>
+                    <select class="nami border-2 border-cyan-600 rounded-md ml-4 mt-4" name="nami">
+                      <option value="">Nom du bénéficiaire...</option>
+                      <option value="nami">Nami</option>
+                      <option value="zoro">Zoro</option>
+                      <option value="luffy">Luffy</option>
+                      <option value="choppa">Choppa</option>
+                    </select>
+                    <div class="result"></div>
+                    <br>
+                    <label for="" class="text-lg font-semibold ml-3">Ajouter montant à transférer :</label>
+                    <input
+                    type="number"
+                    class="form-control border-2 border-cyan-600 rounded-md ml-4 mt-4"
+                    id="transfer-input"
+                    placeholder="Montant"
+                    />
+                    <div class="flex justify-center pt-8 pb-5">
+                      <button class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1" id="transfer-btn">Envoyer</button>
+                    </div>
+                  </form>
+              </div>
+          </div>
+        </section>
+      </section>
+      <!-- FOOTER -->
+      <footer class="w-full mt-auto pt-5 h-30 text-gray-300 font-semibold">
+        <section class="container">
+          <div class="grid grid-cols-2">
+            <div class="flex flex-col ml-4">
+              <img
+                src="../../assets/img/moon-logo.png"
+                alt="logo"
+                height="auto"
+                width="50px"
+              />
+              <div>
+                <span>©MZB 2022 - Copyright</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-end mr-4">
+              <span>
+                <a href="#" target="_blank" rel="noreferrer noopener"
+                  ><i class="fa-brands fa-linkedin-in fa-lg">LinkedIn</i></a
+                >
+              </span>
+              <span>
+                <a href="#" target="_blank" rel="noreferrer noopener"
+                  ><i class="fa-brands fa-github fa-lg">Github</i></a
+                >
+              </span>
+              <span>
+                <a href="#" target="_blank" rel="noreferrer noopener"
+                  ><i class="fa-solid fa-laptop-code fa-lg">Portfolio</i></a
+                >
+              </span>
+            </div>
+          </div>
+        </section>
+      </footer>
   </body>
 </html>

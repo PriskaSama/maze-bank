@@ -31,7 +31,16 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
     },
-    extend: {},
-  },
-  plugins: [],
-}
+    extend: {
+      },
+
+    backgroundImage: {
+        "moon": "url('../img/bg-moon.png')",
+      },
+
+    fontFamily: {
+        'roboto': ['/src/assets/fonts/Roboto/Roboto-Medium.ttf'],
+      },
+    },
+    plugins: [],
+  }
