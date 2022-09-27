@@ -1,1 +1,0 @@
-(self.webpackChunkmaze_bank=self.webpackChunkmaze_bank||[]).push([[179],{799:()=>{}},a=>{a(a.s=799)}]);
