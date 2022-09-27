@@ -8,7 +8,7 @@
     "start": "run-p start:**",
     "start:webpack": "webpack serve --open --config webpack.dev.js",
     "start:tailwind": "tailwindcss -i ./src/assets/css/styles.css -o ./dist/assets/css/output.css --watch",
-    "build": "run-s start:**",
+    "build": "run-s build:**",
     "build:webpack": "webpack --config webpack.prod.js",
     "build:tailwind": "tailwindcss -i ./src/assets/css/styles.css -o ./dist/assets/css/output.css"
   },
