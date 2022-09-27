@@ -6,18 +6,14 @@ Pour cela, notre challenge est de créer une application bancaire en utilisant J
 
 ## Score GT Metrix
 
-
-
 ## 📝 Etapes
 
 > Création de la base de notre projet webpack.
 
-
-
 ## Liens vers le projet
 
 - Github
-- Netlify 
+- Netlify
 
 ## Contact
 
