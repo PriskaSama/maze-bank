@@ -14,14 +14,15 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "./src/index.html"),
+        template: path.resolve(__dirname, "./src/pages/home/index.html"),
         filename: "index.html",
-        title: 'Production',
+        title: 'Maze-Bank',
       }),
     new CopyPlugin({
       patterns: [
         { from: "./src/assets/fonts/", to: "assets/fonts/" },
         { from: "./src/assets/img/", to: "assets/img/" },
+        
       ],
     }),
   ],
