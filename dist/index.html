@@ -5,162 +5,279 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maze-Bank</title>
-    <link rel="stylesheet" href="../../assets/css/output.css"/>
-  <script defer src="/assets/runtime.bundle.js"></script><script defer src="/assets/main.bundle.js"></script></head>
+    <link rel="stylesheet" href="../../assets/css/output.css" />
+    <script defer src="/assets/runtime.bundle.js"></script>
+    <script defer src="/assets/main.bundle.js"></script>
+  </head>
   <body class="text-black font-roboto bg-moon bg-cover bg-center bg-no-repeat">
     <!-- HEADER -->
-      <header class="h-24 grid grid-cols-3 uppercase">
-        <div class="flex items-center justify-evenly">
-          <img
-            src="../../assets/img/moon-logo.png"
-            alt="logo"
-            height="auto"
-            width="50px"
-          />
-        </div>
-        <div class="grid col-span-2">
-          <!-- add home and contact icons instead of text -->
-            <nav class="flex items-center">
-              <ul class="flex font-semibold text-gray-300">
-                <li>
-                  <a href="#">Accueil</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-            </nav>
-        </div>
-      </header>
-      <!-- BODY -->
-      <section class="">
-        <div class="text-center">
-          <h1 class="uppercase font-semibold text-cyan-500">Bienvenue sur Maze-Bank</h1>
-          <h3 class="text-gray-100">Gérez votre compte bancaire en ligne</h3>
-        </div>
-        <div class="my-16">
-          <h1 class="uppercase font-bold text-center pb-8 text-cyan-500 border-4 border-violet-500 border-double py-8 shadow-2xl text-xl">Opérations courantes</h1>
-        </div>
+    <header class="h-24 grid grid-cols-3 uppercase">
+      <div class="flex items-center justify-evenly lg:ml-4 lg:mt-4">
+        <img
+          src="../../assets/img/moon-logo.png"
+          alt="logo"
+          height="auto"
+          class="w-20 lg:w-40"
+        />
+      </div>
+      <div class="grid col-span-2">
+        <nav class="flex items-center">
+          <ul
+            class="font-semibold text-gray-100 flex flex-row justify-around w-full"
+          >
+            <li>
+              <span class="lg:hidden">
+                <a href="#" target="_blank" rel="noreferrer noopener"
+                  ><i class="fa-solid fa-house fa-xl"></i
+                ></a>
+              </span>
+              <span class="hidden lg:flex">
+                <a href="#" class="lg:text-xl">Accueil</a>
+              </span>
+            </li>
+            <li>
+              <span class="lg:hidden">
+                <a href="#" target="_blank" rel="noreferrer noopener"
+                  ><i class="fa-solid fa-message fa-xl"></i
+                ></a>
+              </span>
+              <span class="hidden lg:flex">
+                <a href="#" class="lg:text-xl">Contact</a>
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- BODY -->
+    <div class="text-center pt-8 lg:pt-20">
+      <h1 class="uppercase font-semibold text-cyan-400 lg:text-4xl">
+        Bienvenue sur Maze-Bank
+      </h1>
+      <h3 class="text-gray-100 lg:text-xl">
+        La banque qui vous décrochera la Lune
+      </h3>
+    </div>
+    <div class="my-16 lg:flex lg:justify-center lg:pt-16">
+      <h1
+        class="uppercase font-bold text-center pb-8 text-cyan-400 border-4 border-violet-500 border-double py-8 shadow-2xl text-xl lg:text-2xl lg:max-w-fit lg:px-20"
+      >
+        Gérez votre compte bancaire
+      </h1>
+    </div>
+
+    <section id="dashboard" class="lg:my-32">
+      <h1
+        class="uppercase font-bold text-center text-cyan-400 border-4 border-violet-500 border-double py-8 shadow-2xl text-xl hidden lg:flex lg:justify-center pb-20 lg:pb-0 lg:px-24 lg:mx-12">
+        Opérations courantes
+      </h1>
+      <div class="grid grid-rows-3 lg:grid-rows-none lg:mb-8">
         <!-- FIRST ROW -->
-        <section id="dashboard" class="grid grid-cols-1 mt-5">
-          <div class="grid grid-rows-4">
-            <div class="my-4 text-gray-100">
-              <div id="add-amount" class="">
-                <div class="rounded border-4 border-violet-500 border-double pl-4 pb-8 shadow-2xl">
-                  <h3 class="py-4 text-lg font-semibold">Alimenter compte</h3>
-                  <input
-                    type="number"
-                    class="form-control border-2 border-cyan-600 rounded-md pl-3"
-                    id="deposit-input"
-                    placeholder="Montant à déposer"
-                  />
-                  <button class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1" id="deposit-btn">
-                    Déposer
-                  </button>
-                </div>
-                <div class="flex items-center justify-center uppercase font-semibold text-black pt-6">
-                  <div class="rounded-md shadow border bg-blue-400 px-40">
-                    <h1>Dépôt</h1>
-                    <p class="">€<span id="deposit">0</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- SECOND ROW -->
-            <div class="my-4 text-gray-100" data-aos="zoom-in-down">
-              <div class="rounded border-4 border-violet-500 border-double shadow-2xl pl-4 pb-8">
-                <h3 class="py-4 text-lg font-semibold">Retrait</h3>
-                <input
+        <div
+          class="text-gray-100 lg:flex lg:flex-row lg:justify-around lg:col-span-2"
+        >
+          <div id="add-amount" class="lg:flex flex-col justify-center">
+            <div
+              class="rounded border-4 border-violet-500 border-double pl-4 pt-8 pb-8 shadow-2xl"
+            >
+              <h3 class="py-4 text-lg lg:text-2xl font-semibold">
+                Alimenter compte :
+              </h3>
+              <input
+                type="number"
                 class="form-control border-2 border-cyan-600 rounded-md pl-3"
-                  type="number"
-                  id="withdraw-input"
-                  placeholder="Montant à retirer"
-                />
-                <button class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1" id="withdraw-btn">
-                  Retirer
-                </button>
-              </div>
-              <div class="flex items-center justify-center uppercase font-semibold text-black pt-6">
-                <div class="rounded-md shadow border bg-blue-200 px-40">
-                  <h2>Retrait</h2>
-                  <p class="">€<span id="withdraw">0</span></p>
-                </div>
-              </div>
-            </div>
-            <!-- THIRD ROW -->
-            <div class="flex items-center justify-center uppercase font-semibold shadow-2xl">
-              <div class="rounded-md border bg-cyan-100 px-40">
-                <h2>Solde</h2>
-                <br>
-                <p class="rounded-full bg-cyan-200" id="balance">€<span>3500</span></p>
-              </div>
-            </div>
-            <!-- FOURTH ROW -->
-              <div class="text-gray-100">
-                <div class="pb-12">
-                  <h1 class="uppercase font-bold text-center pb-8 text-cyan-500 border-4 border-violet-500 border-double py-8 shadow-2xl text-xl">Effectuer un virement</h1>
-                </div>
-                  <form action="" method="get" class="rounded border-4 border-violet-500 border-double shadow-2xl">
-                    <label for="name" class="ml-3 text-lg font-semibold">Sélectionnez un bénéficiaire : </label>
-                    <br>
-                    <select class="nami border-2 border-cyan-600 rounded-md ml-4 mt-4" name="nami">
-                      <option value="">Nom du bénéficiaire...</option>
-                      <option value="nami">Nami</option>
-                      <option value="zoro">Zoro</option>
-                      <option value="luffy">Luffy</option>
-                      <option value="choppa">Choppa</option>
-                    </select>
-                    <div class="result"></div>
-                    <br>
-                    <label for="" class="text-lg font-semibold ml-3">Ajouter montant à transférer :</label>
-                    <input
-                    type="number"
-                    class="form-control border-2 border-cyan-600 rounded-md ml-4 mt-4"
-                    id="transfer-input"
-                    placeholder="Montant"
-                    />
-                    <div class="flex justify-center pt-8 pb-5">
-                      <button class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1" id="transfer-btn">Envoyer</button>
-                    </div>
-                  </form>
-              </div>
-          </div>
-        </section>
-      </section>
-      <!-- FOOTER -->
-      <footer class="w-full mt-auto pt-5 h-30 text-gray-300 font-semibold">
-        <section class="container">
-          <div class="grid grid-cols-2">
-            <div class="flex flex-col ml-4">
-              <img
-                src="../../assets/img/moon-logo.png"
-                alt="logo"
-                height="auto"
-                width="50px"
+                id="deposit-input"
+                placeholder="Montant à déposer"
               />
-              <div>
-                <span>©MZB 2022 - Copyright</span>
+              <button
+                class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1 lg:mx-8"
+                id="deposit-btn"
+              >
+                Déposer
+              </button>
+            </div>
+            <div
+              class="flex items-center justify-center uppercase font-semibold pt-6"
+            >
+              <div class="rounded-md shadow-xl bg-cyan-500 px-20 lg:px-12">
+                <h1>Dépôt</h1>
+                <p class="">€<span id="deposit">0</span></p>
               </div>
             </div>
-            <div class="flex justify-between items-end mr-4">
-              <span>
-                <a href="#" target="_blank" rel="noreferrer noopener"
-                  ><i class="fa-brands fa-linkedin-in fa-lg">LinkedIn</i></a
-                >
-              </span>
-              <span>
-                <a href="#" target="_blank" rel="noreferrer noopener"
-                  ><i class="fa-brands fa-github fa-lg">Github</i></a
-                >
-              </span>
-              <span>
-                <a href="#" target="_blank" rel="noreferrer noopener"
-                  ><i class="fa-solid fa-laptop-code fa-lg">Portfolio</i></a
-                >
-              </span>
+          </div>
+          <div
+            id="withdraw-amount"
+            class="lg:flex flex-col justify-center"
+            data-aos="zoom-in-down"
+          >
+            <div
+              class="rounded border-4 border-violet-500 border-double shadow-2xl pl-4 pb-8 pt-8 text-gray-100"
+            >
+              <h3 class="py-4 text-lg lg:text-2xl font-semibold">Retrait :</h3>
+              <input
+                class="form-control border-2 border-cyan-600 rounded-md pl-3"
+                type="number"
+                id="withdraw-input"
+                placeholder="Montant à retirer"
+              />
+              <button
+                class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1 lg:mx-8"
+                id="withdraw-btn"
+              >
+                Retirer
+              </button>
+            </div>
+            <div
+              class="flex items-center justify-center uppercase font-semibold pt-6"
+            >
+              <div class="rounded-md shadow-xl bg-cyan-500 px-20 lg:px-12">
+                <h2>Retrait</h2>
+                <p class="">€<span id="withdraw">0</span></p>
+              </div>
             </div>
           </div>
-        </section>
-      </footer>
+        </div>
+        <!-- SECOND ROW -->
+        <div class="flex justify-center items-center lg:col-span-2">
+          <div class="uppercase font-semibold">
+            <div
+              class="rounded-md bg-violet-500 text-gray-100 text-center lg:mx-"
+            >
+              <h2>Votre solde :</h2>
+              <br />
+              <p class="rounded-full" id="balance">€<span>3500</span></p>
+            </div>
+            <div class="pt-8">
+              <img
+                src="../../assets/img/earth.png"
+                alt="earth"
+                height="auto"
+                width="230px"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- THIRD ROW -->
+        <div class="lg:col-span-2">
+          <div class="pb-12">
+            <h1
+              class="uppercase font-bold text-center pb-8 text-cyan-400 border-4 border-violet-500 border-double py-8 lg:mx-12 shadow-2xl text-xl"
+            >
+              Effectuer un virement
+            </h1>
+          </div>
+          <!-- SELECT BENEFICIARIES -->
+          <form
+            action=""
+            method="get"
+            class="rounded border-4 border-violet-500 border-double shadow-2xl lg:mx-12"
+          >
+            <label
+              for="name"
+              class="ml-3 text-lg lg:text-2xl font-semibold text-gray-100"
+              >Sélectionnez un bénéficiaire :
+            </label>
+            <br />
+            <select
+              class="border-2 border-cyan-600 rounded-md ml-4 mt-4"
+              name="beneficiary"
+              id="select-list"
+            >
+              <option value="">Sélectionnez un bénéficiaire</option>
+              <option value="nami">Nami</option>
+              <option value="zoro">Zoro</option>
+              <option value="luffy">Luffy</option>
+              <option value="choppa">Choppa</option>
+            </select>
+            <div class="result"></div>
+            <br />
+            <label
+              for=""
+              class="text-lg lg:text-2xl font-semibold ml-3 text-gray-100"
+              >Ajouter montant à transférer :</label
+            >
+            <input
+              type="number"
+              class="form-control border-2 border-cyan-600 rounded-md ml-4 mt-4 pl-2 lg:mr-4"
+              id="transfer-input"
+              placeholder="Montant"
+            />
+            <div class="flex justify-center pt-8 pb-5">
+              <button
+                class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1 text-white"
+                id="transfer-btn"
+              >
+                Envoyer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div></div>
+    <!-- FOOTER -->
+    <footer
+      class="w-full mt-auto text-gray-300 font-semibold border-4 border-violet-500 border-double"
+    >
+      <section class="container">
+        <div class="grid grid-cols-2 h-36">
+          <div class="flex flex-col justify-end ml-4 h-full">
+            <img
+              src="../../assets/img/moon-logo.png"
+              alt="logo"
+              height="auto"
+              width="50px"
+            />
+            <div>
+              <span>©MZB 2022 - Copyright</span>
+            </div>
+          </div>
+          <div class="flex justify-around items-center">
+            <span>
+              <a
+                href="https://www.linkedin.com/in/dervilleprisca/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <span class="flex lg:hidden">
+                  <i class="fa-brands fa-linkedin-in fa-lg"></i>
+                </span>
+                <span class="hidden lg:flex">
+                  <i class="fa-brands fa-linkedin-in fa-xl"></i>
+                </span>
+              </a>
+            </span>
+            <span>
+              <a
+                href="https://github.com/PriskaSama"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <span class="flex lg:hidden">
+                  <i class="fa-brands fa-github fa-lg"></i>
+                </span>
+                <span class="hidden lg:flex">
+                  <i class="fa-brands fa-github fa-xl"></i>
+                </span>
+              </a>
+            </span>
+            <span>
+              <a
+                href="https://portfolio-priska.netlify.app"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <span class="flex lg:hidden">
+                  <i class="fa-solid fa-book-atlas fa-lg"></i>
+                </span>
+                <span class="hidden lg:flex">
+                  <i class="fa-solid fa-book-atlas fa-xl"></i>
+                </span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
