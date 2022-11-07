@@ -56,7 +56,9 @@
               <div
                 class="rounded-3xl h-fit w-10-13 lg-w-10-12 my-8 backdrop-blur-xl shadow-2xl bg-white-10 pl-4 pt-8 pb-8"
               >
-                <h3 class="py-4 text-lg lg:text-2xl font-semibold underline my-4">
+                <h3
+                  class="py-4 text-lg lg:text-2xl font-semibold underline my-4"
+                >
                   Alimenter compte :
                 </h3>
                 <input
@@ -91,7 +93,9 @@
               <div
                 class="rounded-3xl h-fit w-10-13 lg-w-10-12 my-8 backdrop-blur-xl shadow-2xl bg-white-10 pl-4 pb-8 pt-8 text-gray-100"
               >
-                <h3 class="py-4 text-lg lg:text-2xl font-semibold underline my-4">
+                <h3
+                  class="py-4 text-lg lg:text-2xl font-semibold underline my-4"
+                >
                   Retrait :
                 </h3>
                 <input
@@ -149,53 +153,53 @@
               </h1>
             </div>
             <!-- SELECT BENEFICIARIES -->
-              <form
+            <form
               action=""
               method="get"
               class="rounded-3xl h-fit w-10-13 lg-w-10-12 my-8 backdrop-blur-xl bg-white-10 shadow-2xl lg:mx-12 text-center"
-              >
+            >
               <label
-              for="name"
-              class="ml-3 text-lg lg:text-2xl font-semibold text-gray-100 underline"
-              >Sélectionnez un bénéficiaire :
-            </label>
-            <br />
-            <select
-            class="border-2 border-violet-600 rounded-md ml-4 mt-8"
-            name="beneficiary"
-            id="select-list"
-            >
-            <option value="">Sélectionnez un bénéficiaire</option>
-            <option value="nami">Nami</option>
-            <option value="zoro">Zoro</option>
-            <option value="luffy">Luffy</option>
-            <option value="choppa">Choppa</option>
-          </select>
-          <div class="result mt-12"></div>
-          <br />
-          <label
-          for=""
-          class="text-lg lg:text-2xl font-semibold ml-3 text-gray-100 underline"
-          >Ajouter montant à transférer :</label
-          >
-          <input
-          type="number"
-          class="form-control border-2 border-violet-600 rounded-md ml-4 pl-2 lg:mr-4 mt-8"
-          id="transfer-input"
-          placeholder="Montant"
-          />
-          <div class="flex justify-center pt-8 pb-5">
-            <button
-            class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1 mt-8 text-white"
-            id="transfer-btn"
-            >
-            Envoyer
-          </button>
+                for="name"
+                class="ml-3 text-lg lg:text-2xl font-semibold text-gray-100 underline"
+                >Sélectionnez un bénéficiaire :
+              </label>
+              <br />
+              <select
+                class="border-2 border-violet-600 rounded-md ml-4 mt-8"
+                name="beneficiary"
+                id="select-list"
+              >
+                <option value="">Sélectionnez un bénéficiaire</option>
+                <option value="nami">Nami</option>
+                <option value="zoro">Zoro</option>
+                <option value="luffy">Luffy</option>
+                <option value="choppa">Choppa</option>
+              </select>
+              <div class="result mt-12"></div>
+              <br />
+              <label
+                for=""
+                class="text-lg lg:text-2xl font-semibold ml-3 text-gray-100 underline"
+                >Ajouter montant à transférer :</label
+              >
+              <input
+                type="number"
+                class="form-control border-2 border-violet-600 rounded-md ml-4 pl-2 lg:mr-4 mt-8"
+                id="transfer-input"
+                placeholder="Montant"
+              />
+              <div class="flex justify-center pt-8 pb-5">
+                <button
+                  class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1 mt-8 text-white"
+                  id="transfer-btn"
+                >
+                  Envoyer
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </form>
-    </div>
-  </div>
-</section>
+      </section>
     </main>
     <!-- FOOTER -->
     <footer class="w-full mt-auto text-gray-300 font-semibold bg-indigo-900">
