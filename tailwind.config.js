@@ -36,7 +36,7 @@ module.exports = {
     },
     
     backgroundImage: {
-        "moon": "url('https://img.freepik.com/free-vector/mountain-landscape-with-waterfall-night_107791-7316.jpg?w=2000&t=st=1667748216~exp=1667748816~hmac=e00d25034f56c885aa78922491b4c10440449378ee4db5818044788e21cde0aa')",
+        "moon": "https://img.freepik.com/free-vector/vector-vibrant-neon-circle-with-glow_87202-1037.jpg?w=1380&t=st=1667815388~exp=1667815988~hmac=19eac25380491733b2ffb3f5a800f7eebb5bcc725bd2fd61b8074c0f2f9b625d')",
       },
 
     fontFamily: {
