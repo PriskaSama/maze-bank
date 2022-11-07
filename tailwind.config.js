@@ -33,10 +33,10 @@ module.exports = {
       rose: colors.rose,
     },
     extend: {
-      },
-
+    },
+    
     backgroundImage: {
-        "moon": "url('../img/bg-moon.png')",
+        "moon": "url('https://img.freepik.com/free-vector/mountain-landscape-with-waterfall-night_107791-7316.jpg?w=2000&t=st=1667748216~exp=1667748816~hmac=e00d25034f56c885aa78922491b4c10440449378ee4db5818044788e21cde0aa')",
       },
 
     fontFamily: {
