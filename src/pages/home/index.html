@@ -9,7 +9,9 @@
     <script defer src="/assets/runtime.bundle.js"></script>
     <script defer src="/assets/main.bundle.js"></script>
   </head>
-  <body class="text-black font-roboto">
+  <body
+    class="text-black font-roboto bg-abstract bg-cover bg-no-repeat bg-center"
+  >
     <!-- HEADER -->
     <header class="grid grid-cols-3 bg-indigo-900">
       <div class="flex items-center justify-start pl-4 lg:ml-4 lg:mt-4">
@@ -21,7 +23,7 @@
         />
       </div>
       <div class="grid col-span-3">
-        <div class="text-center pt-8 lg:pt-20">
+        <div class="text-center pt-8 lg:py-20">
           <h1 class="uppercase font-bold text-cyan-400 text-xl lg:text-4xl">
             Bienvenue sur Maze-Bank
           </h1>
@@ -32,7 +34,7 @@
       </div>
     </header>
     <!-- BODY -->
-    <main class="bg-moon bg-no-repeat bg-center bg-cover">
+    <main class="">
       <div class="my-16 lg:flex lg:justify-center lg:pt-16">
         <h1
           class="uppercase font-bold text-center pb-8 text-cyan-400 rounded-3xl h-fit w-10-13 lg-w-10-12 my-8 backdrop-blur-xl shadow-2xl bg-white-10 py-8 text-xl lg:text-2xl lg:max-w-fit lg:px-20"
@@ -40,7 +42,6 @@
           Gérez votre compte bancaire
         </h1>
       </div>
-
       <section id="dashboard" class="lg:my-32">
         <h1
           class="uppercase font-bold text-center text-cyan-400 border-4 border-violet-500 border-double py-8 shadow-2xl text-xl hidden lg:flex lg:justify-center pb-20 lg:pb-0 lg:px-24 lg:mx-12"
@@ -190,7 +191,7 @@
               />
               <div class="flex justify-center pt-8 pb-5">
                 <button
-                  class="rounded-full bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1 mt-8 text-white"
+                  class="rounded-full cursor-pointer hover:scale-125 bg-violet-500 hover:bg-violet-800 shadow-lg px-6 py-1 mt-8 text-white"
                   id="transfer-btn"
                 >
                   Envoyer

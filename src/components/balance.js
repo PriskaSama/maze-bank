@@ -54,3 +54,5 @@ withdrawBtn.addEventListener("click", () => {
 // };
 
 export default balance;
+
+// AJOUTER LE ENTER

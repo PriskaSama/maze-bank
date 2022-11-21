@@ -35,7 +35,7 @@ module.exports = {
     extend: {},
 
     backgroundImage: {
-      "moon": "url('/src/assets/img/abstractpurple-bg.jpg)",
+      'abstract': "url('../img/abstractpurple-bg.jpg')",
     },
 
     fontFamily: {
